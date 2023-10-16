@@ -1,0 +1,26 @@
+export const translations: Record<'en' | 'vi', Record<string, string>> = {
+  en: {
+    address: 'Address',
+    aboutUs: 'aboutUs',
+    blog: 'Blog',
+    contact: 'Contact',
+    events: 'Events',
+    home: 'Home',
+    openHours: 'Open Hours',
+    menu: 'Menu',
+    services: 'Services',
+    booking: 'Booking',
+  },
+  vi: {
+    address: 'Địa chỉ',
+    aboutUs: 'Về The Lodge',
+    blog: 'Bài viết',
+    contact: 'Liên hệ',
+    events: 'Sự kiện',
+    home: 'Trang chủ',
+    openHours: 'Giờ mở cửa',
+    menu: 'Thực đơn',
+    services: 'Dịch vụ',
+    booking: 'Đặt chỗ',
+  },
+};
