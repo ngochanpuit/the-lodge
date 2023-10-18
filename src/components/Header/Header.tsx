@@ -67,33 +67,26 @@ export default function Header() {
               </li>
             </ul>
           </div>
-
-          <div className="header_top_right">
-            <select onChange={handleLanguageChange} value={language}>
-              <option value="en">EN</option>
-              <option value="vi">VI</option>
-            </select>
-          </div>
         </div>
       </div>
-      <div className={`header_bottom ${isScrolled ? 'header_scroll' : ''}`}>
-        <div className="container">
-          <div className="header_bottom_logo">
+      <div className={`header_bottom  ${isScrolled ? 'header_scroll' : ''}`}>
+        <div className="container flex">
+          <div className="header_bottom_logo w-1/5">
             <div className="logo_wrapper">
               <a>
-                <img src="./images/logo.jpg" alt="" />
+                <img src="images/logo.jpg" alt="" />
               </a>
             </div>
           </div>
-          <nav className="header_bottom_menu">
+          <nav className="header_bottom_menu flex-1 w-3/5">
             <ul id="main_menu">
               <li>
-                <Link href="">{t('home')}</Link>
+                <Link href="/">{t('home')}</Link>
               </li>
               <li className="dropdown">
                 <div>Coffee</div>
                 <div className="dropdown_item">
-                  <Link href="">{t('menu')}</Link>
+                  <Link href="/coffee-menu">{t('menu')}</Link>
                   <Link href="">{t('blog')}</Link>
                   <Link href="">{t('events')}</Link>
                 </div>
@@ -111,6 +104,12 @@ export default function Header() {
               </li>
             </ul>
           </nav>
+          <div className="header_bottom_right w-1/5">
+            <select onChange={handleLanguageChange} value={language}>
+              <option value="en">EN</option>
+              <option value="vi">VI</option>
+            </select>
+          </div>
           <div className="mobile_menu_button">
             <button
               type="button"
@@ -140,7 +139,7 @@ export default function Header() {
                       <FontAwesomeIcon icon={faChevronRight} />
                     )}
                     <div className={`${isCoffeeDropdown ? 'mobile_dropdown_item' : 'hidden'}`}>
-                      <Link href="">{t('menu')}</Link>
+                      <Link href="/coffee/menu">{t('menu')}</Link>
                       <Link href="">{t('blog')}</Link>
                       <Link href="">{t('events')}</Link>
                     </div>

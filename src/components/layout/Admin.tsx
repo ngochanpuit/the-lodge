@@ -9,7 +9,9 @@ export default function Admin({ children }: AdminProps) {
   return (
     <div>
       <Header />
-      <div className="content-body">{children}</div>
+      <div className="content_body">
+        <div className="container">{children}</div>
+      </div>
       <Footer />
     </div>
   );
