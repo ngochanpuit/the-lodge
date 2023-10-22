@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookSquare, faInstagramSquare, faTiktok } from '@fortawesome/free-brands-svg-icons';
 import { TranslationContext } from '@/contexts/translation.context';
 import { useContext } from 'react';
-import GoogleMapComponent from '../GoogleMap';
+import GoogleMapComponent from './GoogleMap';
 
 export default function Footer() {
   const { t } = useContext(TranslationContext);
@@ -14,13 +14,14 @@ export default function Footer() {
       <div className="footer_top flex flex-wrap">
         <div className="footer_info_1 w-full md:w-3/5">
           <h2>{t('openHours')}</h2>
-          <p>Cafe: 7h - 22h</p>
-          <p>Spa: 9h - 22h</p>
+          <p className="text-lime-600 mb-2">{t('openHoursDay')}</p>
+          <p>Cafe: {t('openHoursTime')} </p>
           <br />
           <h2>{t('address')}</h2>
-          <p className="items-center px-4">
+          <p className="text-center px-4">
             Lô F9 - 84 đường 3/2, P. Vĩnh Lạc,
-            {''} <br /> Rạch Giá - Kiên Giang {`(Kế lẩu dê Đức Tài)`}
+            {''} <br /> Rạch Giá - Kiên Giang <br />
+            {`(Kế lẩu dê Đức Tài)`}
           </p>
         </div>
         <div className="footer_info_2 w-full md:w-2/5">
@@ -54,7 +55,7 @@ export default function Footer() {
         </ul>
       </div>
       <div className="w-full text-center py-1 bg-gray-400 text-white">
-        © 2023 All Rights Reserved By Pu
+        © 2023 All Rights Reserved By <b>Pu</b>
       </div>
     </footer>
   );

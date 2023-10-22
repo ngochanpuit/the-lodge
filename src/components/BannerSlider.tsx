@@ -24,7 +24,7 @@ const Slideshow = () => {
     ),
   };
   return (
-    <div className="w-full pb-10">
+    <div className="w-full">
       <Zoom {...zoomInProperties}>
         {images.map((each, index) => (
           <div key={index} className="flex justify-center items-start relative">
