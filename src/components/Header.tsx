@@ -52,10 +52,12 @@ export default function Header() {
           </li>
           <li>
             <FontAwesomeIcon className="pr-2" icon={faPhone} />
-            079.4034.322
+            0794.034.322
           </li>
           <li>
-            <FontAwesomeIcon icon={faFacebookSquare} />
+            <Link href={'https://www.facebook.com/groups/282367447884091/members'}>
+              <FontAwesomeIcon icon={faFacebookSquare} />
+            </Link>
           </li>
           <li>
             <FontAwesomeIcon icon={faInstagramSquare} />
@@ -83,12 +85,14 @@ export default function Header() {
               </div>
             </li>
             <li className="dropdown">
-              <div>Spa</div>
-              <div className="dropdown_item">
+              <div>
+                <Link href="/spa">Spa</Link>
+              </div>
+              {/* <div className="dropdown_item">
                 <Link href="">{t('services')}</Link>
                 <Link href="">{t('blog')}</Link>
                 <Link href="">{t('booking')}</Link>
-              </div>
+              </div> */}
             </li>
           </ul>
         </nav>
@@ -135,8 +139,11 @@ export default function Header() {
               </li>
               <li className="mobile_dropdown">
                 <div onClick={toggleSpaDropdown}>
-                  <span>Spa</span>
-                  {isSpaDropdown ? (
+                  <span>
+                    {' '}
+                    <Link href="/spa">Spa</Link>
+                  </span>
+                  {/* {isSpaDropdown ? (
                     <FontAwesomeIcon icon={faChevronDown} />
                   ) : (
                     <FontAwesomeIcon icon={faChevronRight} />
@@ -145,7 +152,7 @@ export default function Header() {
                     <Link href="">{t('services')}</Link>
                     <Link href="">{t('blog')}</Link>
                     <Link href="">{t('booking')}</Link>
-                  </div>
+                  </div> */}
                 </div>
               </li>
               <li>

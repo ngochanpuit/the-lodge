@@ -22,7 +22,7 @@ export default function Events() {
         <section id="events" className="events !pt-6">
           <div className="container" data-aos="fade-up">
             <div className="section-title">
-              <p>{t('events')}</p>
+              <p>{t('Sắp diễn ra')}</p>
             </div>
 
             <div className="events-slider swiper" data-aos="fade-up" data-aos-delay="100">
@@ -30,33 +30,28 @@ export default function Events() {
                 <div className="swiper-slide">
                   <div className="row event-item">
                     <div className="col-lg-6">
-                      <img src="images/acoustic.jpg" className="img-fluid" alt="" />
+                      <img src="images/grand-opening.jpg" className="img-fluid" alt="" />
                     </div>
                     <div className="col-lg-6 pt-4 pt-lg-0 content">
-                      <h3>Acoustic</h3>
-                      <div className="price">
-                        <p>
-                          <a href="#events-form">
-                            <span>
-                              <i>{t('booking')}</i>
-                            </span>
-                          </a>
-                        </p>
+                      <div className="event-title">
+                        <h3>{t('grandOpening')}</h3>
+                        <div className="event-date">02/11/2023</div>
+                      </div>
+                      <div className="event-booking">
+                        <a href="#events-form">
+                          <span>
+                            <i>{t('booking')}</i>
+                          </span>
+                        </a>
                       </div>
                       <p className="fst-italic">
-                        Kopi Kount's Coffee Cart brings caffeine and convenience to any event –
-                        weddings, corporate functions, and more.
+                        The Lodge Cafe không chỉ là nơi uống cà phê, mà còn là một trải nghiệm tình
+                        yêu và nghệ thuật. Hãy tới với chúng tôi để đắm chìm trong không gian thiên
+                        nhiên tươi mát và âm nhạc tinh tế - nơi mà tình yêu và cuộc sống độc đáo hòa
+                        quyện vào nhau. <br />
+                        Chào đón bạn đến với cuộc phiêu lưu tình yêu và nghệ thuật tại quán cafe của
+                        chúng tôi 🎻🎷🥁.
                       </p>
-                      <ul>
-                        <li>
-                          <i className="bi bi-check-circled"></i> Ullamco laboris nisi ut aliquip ex
-                          ea commodo consequat.
-                        </li>
-                        <li>
-                          <i className="bi bi-check-circled"></i> Duis aute irure dolor in
-                          reprehenderit in voluptate velit.
-                        </li>
-                      </ul>
                     </div>
                   </div>
                 </div>
@@ -85,24 +80,8 @@ export default function Events() {
                     <input type="phone" className="form-control" name="phone" id="phone" required />
                   </div>
                   <div className="form-group mt-3">
-                    <label htmlFor="event-date">{t('date')}</label>
-                    <input
-                      type="date"
-                      name="event-date"
-                      className="form-control"
-                      id="event-date"
-                      required
-                    />
-                  </div>
-                  <div className="form-group mt-3">
-                    <label htmlFor="start-time">{t('startTime')}</label>
-                    <input
-                      type="time"
-                      name="start-time"
-                      className="form-control"
-                      id="start-time"
-                      required
-                    />
+                    <label htmlFor="email">Email</label>
+                    <input type="email" className="form-control" name="email" id="email" required />
                   </div>
                   <div className="form-group mt-3">
                     <label htmlFor="num-people">{t('numOfPeople')}</label>

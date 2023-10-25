@@ -5,7 +5,7 @@ import { TranslationProvider } from '@/providers/TranslationProvider';
 export default function MyApp({ Component, pageProps }: AppProps) {
   return (
     <TranslationProvider>
-      <Component {...pageProps} />;
+      <Component {...pageProps} />
     </TranslationProvider>
   );
 }

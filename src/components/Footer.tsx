@@ -4,6 +4,7 @@ import { faFacebookSquare, faInstagramSquare, faTiktok } from '@fortawesome/free
 import { TranslationContext } from '@/contexts/translation.context';
 import { useContext } from 'react';
 import GoogleMapComponent from './GoogleMap';
+import Link from 'next/link';
 
 export default function Footer() {
   const { t } = useContext(TranslationContext);
@@ -14,8 +15,8 @@ export default function Footer() {
       <div className="footer_top flex flex-wrap">
         <div className="footer_info_1 w-full md:w-3/5">
           <h2>{t('openHours')}</h2>
-          <p className="text-lime-600 mb-2">{t('openHoursDay')}</p>
-          <p>Cafe: {t('openHoursTime')} </p>
+          <p className="mb-2">{t('openHoursDay')}</p>
+          <p>{t('openHoursTime')} </p>
           <br />
           <h2>{t('address')}</h2>
           <p className="text-center px-4">
@@ -27,16 +28,16 @@ export default function Footer() {
         <div className="footer_info_2 w-full md:w-2/5">
           <img src="images/coffee_bg.jpg" alt="" />
           <div className="footer_info_2-text pr-9">
-            <p>Khách hàng là cha là mẹ</p>
+            <p>The Lodge - Coffee and Tea</p>
             <br />
             <div>
               <FontAwesomeIcon className="pr-2" icon={faEnvelope} />
-              thelodge@gmail.com
+              thelodge.rachgia@gmail.com
             </div>
             <br />
             <div>
               <FontAwesomeIcon className="pr-2" icon={faPhone} />
-              079.4034.322
+              0794.034.322
             </div>
           </div>
         </div>
@@ -44,13 +45,19 @@ export default function Footer() {
       <div className="footer_bottom-brands">
         <ul className="flex">
           <li>
-            <FontAwesomeIcon icon={faFacebookSquare} /> The Lodge
+            <Link href="https://www.facebook.com/profile.php?id=61552843432829">
+              <FontAwesomeIcon icon={faFacebookSquare} /> The Lodge
+            </Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faInstagramSquare} /> the.lodge
+            <Link href="https://www.instagram.com/thelodge.rachgia/">
+              <FontAwesomeIcon icon={faInstagramSquare} /> the.lodge
+            </Link>
           </li>
           <li>
-            <FontAwesomeIcon icon={faTiktok} /> thelodgene
+            <Link href="https://www.tiktok.com/@thelodge.rachgia">
+              <FontAwesomeIcon icon={faTiktok} /> thelodgene
+            </Link>
           </li>
         </ul>
       </div>

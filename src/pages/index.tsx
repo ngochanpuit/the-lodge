@@ -12,8 +12,9 @@ export default function Index() {
         <title>{t('home')}</title>
       </Head>
       <BannerSlider />
-      <div className="p-10">
-        <section className="spcl_section pb-10">
+
+      <div className="px-8 py-14">
+        {/* <section className="spcl_section pb-10">
           <div className="container">
             <div className="flex flex-wrap">
               <div className="w-full md:w-1/2">
@@ -58,28 +59,30 @@ export default function Index() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         <section className="!py-0 about_section">
           <div className="container">
-            <div className="row">
-              <div className="px-6 col-md-6">
-                <div className="img-box">
-                  <img src="images/about.jpg" alt="" />
-                </div>
+            <div className="col-md-6">
+              <div className="img-box">
+                <img src="images/home.jpg" alt="" />
               </div>
-              <div className="px-6 col-md-6">
-                <div className="detail-box">
-                  <div className="heading_container">
-                    <h2>{t('aboutUs')}</h2>
-                  </div>
-                  <p>
+            </div>
+            <div className="col-md-6">
+              <div className="detail-box mt-6 text-center">
+                <div className="heading_container">
+                  <h2>
+                    Grand Opening
+                    <br />
+                    02/11/2023 🎊
+                  </h2>
+                </div>
+                {/* <p>
                     Sirat Cafe is a welcoming and inclusive coffee shop that blends the best of
                     Islamic culture with the love of coffee. We offer high-quality coffee and
                     delicious halal food options in a warm and welcoming atmosphere. Come and
                     experience the hospitality of Islamic culture at Sirat Cafe.
-                  </p>
-                </div>
+                  </p> */}
               </div>
             </div>
           </div>

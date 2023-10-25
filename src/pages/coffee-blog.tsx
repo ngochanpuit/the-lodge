@@ -46,7 +46,7 @@ export default function CoffeeBlog() {
       </Head>
       <Breadcrumb items={breadcrumbItems} />
 
-      <div className="blog-wrap">
+      {/* <div className="blog-wrap">
         <div className="blog-user">
           <img className="blog-user-avatar" src="images/cs3.jpg"></img>
           <a className="blog-user-name" href="#">
@@ -55,12 +55,12 @@ export default function CoffeeBlog() {
           <div className="blog-user-time">20/10/2023</div>
         </div>
 
-        {/* <div className="blog-location">
+        <div className="blog-location">
           <FontAwesomeIcon icon={faLocationDot} />
           <span className="blog-location-name">
             Lô F9 - 84 đường 3/2, P. Vĩnh Lạc, Rạch Giá - Kiên Giang {`(Kế lẩu dê Đức Tài)`}
           </span>
-        </div> */}
+        </div>
 
         <div className="blog-caption">
           <span>
@@ -101,7 +101,7 @@ export default function CoffeeBlog() {
             <FontAwesomeIcon icon={faChevronRight} />
           </div>
         </div>
-        {/* <div className="comment">
+        <div className="comment">
           <div className="comment-action">
             <p className="comment-action--like">
               <FontAwesomeIcon className="comment-action-icon" icon={faHeart} />
@@ -154,7 +154,14 @@ export default function CoffeeBlog() {
               </div>
             </div>
           </div>
-        </div> */}
+        </div>
+      </div> */}
+
+      <div className="spa-wrap">
+        <img className="img-banner" src="images/acoustic.jpg" alt="" />
+        <div className="spa-content">
+          <h1 className="md:text-6xl text-4xl bold text-white">Cooming soon...</h1>
+        </div>
       </div>
     </Admin>
   );
