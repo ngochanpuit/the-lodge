@@ -15,14 +15,14 @@ export default function Admin({ children }: AdminProps) {
       <div className="content_body">
         <div className="container">{children}</div>
       </div>
-      <Link href="tel:0794034322">
-        <button
-          type="button"
-          className="z-[130] flex bg-green-800 bottom-24 right-7 w-12 h-12  text-white animate-bounce rounded-full fixed cursor-pointer justify-center items-center transition-all"
-        >
+      <button
+        type="button"
+        className="z-[130] flex bg-green-800 bottom-24 right-7 w-12 h-12  text-white animate-bounce rounded-full fixed cursor-pointer justify-center items-center transition-all"
+      >
+        <Link href="tel:0794034322">
           <FontAwesomeIcon className="w-6 h-6" icon={faPhone} />
-        </button>
-      </Link>
+        </Link>
+      </button>
 
       <Footer />
     </div>
