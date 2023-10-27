@@ -1,9 +1,9 @@
 import Breadcrumb from '@/components/Breadcrum';
-import Admin from '@/components/layout/Admin';
+import Admin from '@/layout/Admin';
 import { TranslationContext } from '@/contexts/translation.context';
 import { useContext, useState } from 'react';
 import Head from 'next/head';
-import Menu from '@/components/Menu';
+import Menu from '@/utils';
 export default function MenuPage() {
   const [openTab, setOpenTab] = useState(1);
   const { t } = useContext(TranslationContext);
@@ -25,29 +25,29 @@ export default function MenuPage() {
       <div className="menu">
         <div className="w-full p-3">
           <ul className="menu-title-wrap" role="tablist">
-            {menuTitle.map((item, index) => (
-              <li className="menu_title" key={index}>
+            {menuTitle.map((item) => (
+              <li className="menu_title" key={item.id}>
                 <a
                   className={`menu_item text-lg md:text-xl ${
-                    openTab === index + 1 ? 'active' : ''
+                    openTab === item.id + 1 ? 'active' : ''
                   }`}
                   onClick={(e) => {
                     e.preventDefault();
-                    setOpenTab(index + 1);
+                    setOpenTab(item.id + 1);
                   }}
                   data-toggle="tab"
-                  href={`#link${index + 1}`}
+                  href={`#link${item.id + 1}`}
                   role="tablist"
                 >
-                  {item.title}
+                  {item.label}
                 </a>
               </li>
             ))}
           </ul>
           <div className="tab-content active show" id="tab-1">
-            {menuTitle.map((_, index) => (
-              <div className={openTab === index + 1 ? 'block' : 'hidden'} id="link1">
-                {menuItems[index]?.map((item) => (
+            {menuTitle.map((title) => (
+              <div className={openTab === title.id + 1 ? 'block' : 'hidden'} id="link1">
+                {menuItems[title.id]?.map((item) => (
                   <div className="item-wrapper" key={item.id}>
                     <div
                       className="item_img w-full md:w-2/5 "

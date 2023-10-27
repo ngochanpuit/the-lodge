@@ -1,5 +1,5 @@
 import Breadcrumb from '@/components/Breadcrum';
-import Admin from '@/components/layout/Admin';
+import Admin from '@/layout/Admin';
 import { TranslationContext } from '@/contexts/translation.context';
 import Head from 'next/head';
 import { useContext } from 'react';

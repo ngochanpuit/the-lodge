@@ -97,10 +97,14 @@ export default function Header() {
           </ul>
         </nav>
         <div className="header_bottom_right w-1/5">
-          <select onChange={handleLanguageChange} value={language}>
-            <option value="en">EN</option>
-            <option value="vi">VI</option>
-          </select>
+          <div>
+            <Link href="new-events">Tạo sự kiện</Link>
+
+            <select onChange={handleLanguageChange} value={language}>
+              <option value="en">EN</option>
+              <option value="vi">VI</option>
+            </select>
+          </div>
         </div>
         <div className="mobile_menu_button">
           <button
@@ -156,10 +160,14 @@ export default function Header() {
                 </div>
               </li>
               <li>
-                <select onChange={handleLanguageChange} value={language}>
-                  <option value="en">EN</option>
-                  <option value="vi">VI</option>
-                </select>
+                <div>
+                  <Link href="new-events">Tạo sự kiện</Link>
+
+                  <select onChange={handleLanguageChange} value={language}>
+                    <option value="en">EN</option>
+                    <option value="vi">VI</option>
+                  </select>
+                </div>
               </li>
             </ul>
           </nav>

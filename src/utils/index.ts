@@ -1,24 +1,29 @@
 import { TranslationContext } from '@/contexts/translation.context';
 import { useContext } from 'react';
+import { FormEventControlItem, MenuItem, MenuTitle } from './types';
 
 export const Menu = () => {
   const { t } = useContext(TranslationContext);
 
-  const menuTitle = [
+  const menuTitle: MenuTitle[] = [
     {
-      title: t('favorite'),
+      id: 1,
+      label: t('favorite'),
     },
     {
-      title: 'Cafe',
+      id: 2,
+      label: 'Cafe',
     },
     {
-      title: t('tea'),
+      id: 3,
+      label: t('tea'),
     },
     {
-      title: t('cake'),
+      id: 4,
+      label: t('cake'),
     },
   ];
-  const favoriteItems = [
+  const favoriteItems: MenuItem[] = [
     {
       id: 1,
       name: t('cafeRg'),
@@ -151,4 +156,36 @@ export const Menu = () => {
   return { menuTitle, favoriteItems, coffeeItems, teaItems, cakeItems };
 };
 
+export const formEventControls: FormEventControlItem[] = [
+  {
+    id: 'title',
+    label: 'Tiêu đề',
+    placeholder: 'Nhập tên sự kiện',
+    type: 'text',
+    component: 'input',
+  },
+  {
+    id: 'description',
+    label: 'Mô tả',
+    placeholder: 'Nhập mô tả sự kiện',
+    type: 'text',
+    component: 'textarea',
+  },
+];
+export const initialEventFormData = {
+  title: '',
+  description: '',
+  image: '',
+  category: '',
+};
+
+export const firebaseConfig = {
+  apiKey: 'AIzaSyBklfz0ozRQIODBT75j3IY368Ul_DCRZ2U',
+  authDomain: 'the-lodge-2023.firebaseapp.com',
+  projectId: 'the-lodge-2023',
+  storageBucket: 'the-lodge-2023.appspot.com',
+  messagingSenderId: '201237047452',
+  appId: '1:201237047452:web:d27e1df8770af7f815e559',
+  measurementId: 'G-WLBBDM9XER',
+};
 export default Menu;
